@@ -19,7 +19,6 @@
                 <div class="menuButton"></div>
                 <div class="menuBox">
                     <ul>
-                        <h1><a href="./index.html">marlinLogo</a></h1>
                         <div class="user">
                             <div class="menuButtonClose"></div>
                         </div>
@@ -83,6 +82,49 @@
         </article>
 
     </div>
-
 </body>
+<script>
+  let imageIndex = 0;
+const images = [
+  '../img/cat.jpg',
+  '../img/1.jpg',
+  '../img/2.jpg',
+  '../img/3.jpg',
+  '../img/4.jpg',
+  '../img/5.jpg',
+  '../img/6.jpg'
+];
+const headerBackground = document.querySelector('.headerBackground');
+
+// 預加載圖片
+const preloadedImages = [];
+let loadedImagesCount = 0;
+
+images.forEach((src, index) => {
+  const img = new Image();
+  img.onload = function() {
+    loadedImagesCount++;
+    preloadedImages[index] = this;
+    
+    if (loadedImagesCount === images.length) {
+      // 所有圖片已加載，開始進行背景切換
+      setTimeout(changeBackground, 500);
+    }
+  };
+  img.src = src;
+});
+
+// 切換背景
+function changeBackground() {
+  headerBackground.style.backgroundImage = `url(${preloadedImages[imageIndex].src})`;
+  imageIndex++;
+
+  if (imageIndex >= preloadedImages.length) {
+    imageIndex = 0;
+  }
+
+  setTimeout(changeBackground, 10000); // 每3秒切換一次
+}
+
+</script>
 </html>
