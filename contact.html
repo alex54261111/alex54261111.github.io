@@ -38,7 +38,6 @@
         color: aliceblue;
         background-color: rgba(240, 248, 255, 0.2);
         border: 0;
-        margin-bottom: 20px;
     }
 
 
@@ -67,6 +66,25 @@
         height: 20px;
         border-radius: 6px;
         display: inline-block;
+    }
+
+    @media (max-width: 768px) {
+        .pageBox {
+            height: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding-bottom: 80px;
+        }
+
+        .headerBackgroundCenter {
+            height: 0;
+            width: 100%;
+            position: relative;
+            background-image: url(../img/cat.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;
+        }
     }
 </style>
 

@@ -75,7 +75,7 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* .menuBox>ul>h1 {
+.menuBox>ul>h1 {
     width: 250px;
     height: 70px;
     margin: 0 auto;
@@ -91,7 +91,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     font-size: 0;
-} */
+}
 
 .user {
     height: 50px;
@@ -232,16 +232,21 @@ body {
 }
 
 .container p {
-    margin-top: 20px;
+    margin-top: 10px;
     color: aliceblue;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 600;
 }
 
 .container p:first-child {
     margin-top: 100px;
-    font-size: 40px;
+    margin-bottom: 0;
+    font-size: 20px;
     font-weight: 400;
+}
+
+.container p:nth-child(2) {
+    margin-top: 50px;
 }
 
 .footerBox {
@@ -258,14 +263,14 @@ body {
     align-items: flex-end;
 }
 
-.footerBox a {
+/* .footerBox a {
     float: right;
     margin: 50px 30px 0 0;
     width: 50px;
     height: 50px;
     background: url("../img/ig＿icon.png");
     background-size: cover;
-}
+} */
 
 
 .footerBox p {
@@ -370,6 +375,17 @@ body {
     }
     .containerBox {
         width: 500px;
+    }
+
+    .container p {
+        margin-top: 20px;
+        color: aliceblue;
+        font-size: 50px;
+        font-weight: 600;
+    }
+    
+    .container p:first-child {
+        font-size: 50px;
     }
 /* 
     .banner h2 {

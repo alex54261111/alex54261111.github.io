@@ -2,8 +2,6 @@ $(() => {
     console.log("ok")
     // 鼠标经过
     $(".nav>ul>li").mouseover(function () {
-        // $(this) jQuery 当前元素  this不要加引号
-        // show() 显示元素  hide() 隐藏元素
         $(this).find("ul").stop().show(300);
         console.log("ok")
     });
@@ -14,7 +12,7 @@ $(() => {
     });
 
     // 鼠标经过
-    $(".menuButton").mouseover(function () {
+    $(".menuButton").click(function () {
         if (($(".menuBox").mouseover) != 0) {
             $("body").css("overflow-y", "hidden");
             $("lord-icon").stop().fadeOut(200);
@@ -27,9 +25,6 @@ $(() => {
         $("lord-icon").stop().fadeIn(300);
         $(".menuBox").stop().slideUp(300);
     })
-    // $(".menuBox").click(function () {
-    //     $(".menuBox").stop().hide(300);
-    // })
 
     let click1 = false
     let click2 = false
@@ -52,7 +47,6 @@ $(() => {
 
     $(".click2").click(function () {
         // $(this) jQuery 当前元素  this不要加引号
-        // show() 显示元素  hide() 隐藏元素
         if (click2) {
             $(this).siblings("ul").stop().hide(300);
             click2 = false
@@ -74,8 +68,6 @@ $(() => {
     });
 
     $(".click3").click(function () {
-        // $(this) jQuery 当前元素  this不要加引号
-        // show() 显示元素  hide() 隐藏元素
         if (click3) {
             $(this).siblings("ul").stop().hide(300);
             click3 = false
