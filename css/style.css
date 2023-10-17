@@ -245,8 +245,8 @@ body {
     font-weight: 400;
 }
 
-.container p:nth-child(2) {
-    margin-top: 50px;
+.container p:nth-child(3) {
+    margin-top: 30px;
 }
 
 .footerBox {
@@ -385,7 +385,12 @@ body {
     }
     
     .container p:first-child {
-        font-size: 50px;
+        font-size: 40px;
+    }
+    .container p:nth-child(2) {
+        font-size: 40px;
+        margin: 0;
+        font-weight: 400;
     }
 /* 
     .banner h2 {
